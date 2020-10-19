@@ -60,6 +60,8 @@ const nextSlideClear = () => {
   clearInterval(interval);
 }
 
+nextSlide();
+
 next.addEventListener('click', nextSlideClear);
 prev.addEventListener('click', prevSlide);
 
@@ -105,7 +107,7 @@ $(document).ready(function(){
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 880,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
