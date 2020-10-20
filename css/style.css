@@ -74,6 +74,10 @@ div {
   margin: 0 auto;
 }
 
+.arrow {
+  cursor: pointer;
+}
+
 .title {
   color: #000;
   position: absolute;
@@ -119,6 +123,10 @@ div {
   justify-content: space-between;
   margin: 0 auto;
   width: 30%;
+}
+
+.showcase .social__icons {
+  margin: 2% auto;
 }
 
 .social__icons .fb {
@@ -243,7 +251,7 @@ div {
 .showcase {
   height: 88vh;
   width: 100%;
-  background-image: url('/images/header.JPG');
+  background-image: url('../images/header.JPG');
   background-color: #59c1b7;
   background-size: cover;
   background-repeat: no-repeat;
@@ -282,7 +290,7 @@ div {
 .showcase .arrow-down {
   width: 30px;
   position: absolute;
-  bottom: 15px;
+  bottom: 40px;
 }
 
 .showcase .social-icon {
@@ -1120,15 +1128,40 @@ div {
   }
 }
 
+@media(max-height: 1010px) {
+  .showcase__text {
+    margin: 10% auto;
+  }
+}
+
 @media(max-height: 880px) {
   .showcase__text {
-    margin: 7% auto;
+    margin: 4% auto;
+  }
+  .showcase__header {
+    padding-top: 1%;
+    font-size: 85px;
   }
 }
 
 @media(max-height: 675px) {
   .showcase__text {
-    margin: 4% auto;
+    margin: 3% auto;
+  }
+  .showcase__header {
+    font-size: 80px;
+  }
+  .showcase__text {
+    margin: 1% auto;
+  }
+}
+
+@media(max-height: 600px), (max-width: 800px) {
+  .showcase__text {
+    display: none;
+  }
+  .showcase__subtitle {
+    margin: 7% auto;
   }
 }
 
