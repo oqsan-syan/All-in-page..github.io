@@ -65,7 +65,7 @@ nextSlide();
 next.addEventListener('click', nextSlideClear);
 prev.addEventListener('click', prevSlide);
 
-const interval = setInterval(nextSlide, 2500);
+// const interval = setInterval(nextSlide, 2500);
 
 // Statistic counter
 
