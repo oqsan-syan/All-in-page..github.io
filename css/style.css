@@ -140,10 +140,8 @@ div {
 /* -----------Menu BTn ----------*/
 .menu-icon {
   padding: 10px 0px;
-  /* margin-left: 104px; */
   z-index: 19;
   position: relative;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   width: 25px;
@@ -166,6 +164,7 @@ div {
   height: 2.5px;
   bottom: 0px;
   background-color: #1c8a6f;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 }
 
 .menu-icon-line::after {
@@ -176,6 +175,23 @@ div {
   width: 25px;
   height: 2.5px;
   background-color: #1c8a6f;
+  transition: transform 0.2s ease-in, bottom 0.2s linear 0.2s;
+}
+
+.menu-icon.menu-icon-active .menu-icon-line {
+  background-color: transparent;
+}
+
+.menu-icon.menu-icon-active .menu-icon-line::before {
+  transform: rotate(45deg);
+  top: 9px;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.menu-icon.menu-icon-active .menu-icon-line::after {
+  transform: rotate(-45deg);
+  top: 9px;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 }
 
 .mobile-menu__list {
@@ -183,6 +199,8 @@ div {
 }
 
 .mobile-menu__list.mobile-nav--active {
+  animation-name: numanimation;
+  animation-duration: 1.5s;
   margin-top: 10px;
   display: grid;
   height: 300px;
@@ -191,6 +209,15 @@ div {
   text-align: center;
   align-items: center;
   background-image: linear-gradient(45deg, #17987959, transparent);
+}
+
+@keyframes numanimation {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .mobile-menu__list.mobile-nav--active li {
@@ -265,7 +292,7 @@ div {
   padding: 0 0 10px;
   color: #179879;
   border-bottom: 2px solid transparent;
-  transition: linear ease-in-out .2s;
+  transition: all ease-in-out .2s;
   font-weight: 6000;
 }
 
@@ -330,6 +357,7 @@ div {
 
 .showcase .social-icon {
   opacity: 0.6;
+  transition: all ease-in-out 0.2s;
 }
 
 .showcase .social-icon:hover {
@@ -469,6 +497,11 @@ div {
   display: inline-block;
 }
 
+.our-team .social__icons a {
+  border-bottom: 2px solid transparent;
+  transition: all ease-in 0.2s;
+}
+
 .our-team .social__icons a:hover {
   border-bottom: 2px solid #fff;
 }
@@ -525,12 +558,12 @@ div {
   background-color: #ecf7f4;
   width: 90%;
   margin-top: 30px;
-  transition: 0.3s;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
 }
 
 .services__btn:hover {
   color: #1c8a6f;
-  cursor: pointer;
   background-image: linear-gradient(-13deg, #59c1b7cc, transparent);
 }
 
@@ -565,10 +598,6 @@ div {
   display: grid;
   grid-template-columns: 1fr;
 }
-
-/* .blog__aside-item {
-  height: 300px;
-} */
 
 .blog__aside-img {
   width: 100%;

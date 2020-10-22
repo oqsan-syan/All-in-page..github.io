@@ -72,7 +72,7 @@ const menuIcon = document.querySelector('.menu-icon');
 const mobilNav = document.querySelector('.mobile-menu__list');
 
 menuIcon.addEventListener('click', () => {
-  // menuIcon.classList.toggle('menu-icon-active');
+  menuIcon.classList.toggle('menu-icon-active');
   mobilNav.classList.toggle('mobile-nav--active');
 });
 
