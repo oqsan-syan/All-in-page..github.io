@@ -178,6 +178,39 @@ div {
   background-color: #1c8a6f;
 }
 
+.mobile-menu__list {
+  display: none;
+}
+
+.mobile-menu__list.mobile-nav--active {
+  margin-top: 10px;
+  display: grid;
+  height: 300px;
+  width: unset;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, #17987959, transparent);
+}
+
+.mobile-menu__list.mobile-nav--active li {
+  border-bottom: 1px solid;
+}
+
+.mobile-menu__list.mobile-nav--active li:last-child {
+  border-bottom: unset;
+}
+
+.mobile-menu__list.mobile-nav--active .menu__list-item {
+  width: 100vw;
+}
+
+.mobile-menu__list.mobile-nav--active .menu__list-item a {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+
 /* -----------Header-------------- */
 .header {
   height: 12vh;

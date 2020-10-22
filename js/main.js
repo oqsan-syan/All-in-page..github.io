@@ -67,6 +67,15 @@ prev.addEventListener('click', prevSlide);
 
 const interval = setInterval(nextSlide, 2500);
 
+// Mobile Nav
+const menuIcon = document.querySelector('.menu-icon');
+const mobilNav = document.querySelector('.mobile-menu__list');
+
+menuIcon.addEventListener('click', () => {
+  // menuIcon.classList.toggle('menu-icon-active');
+  mobilNav.classList.toggle('mobile-nav--active');
+});
+
 // Statistic counter
 
 let counters = document.querySelectorAll('.counter');
